@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:prodDB
+    username: user
+    password: pass
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
