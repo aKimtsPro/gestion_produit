@@ -53,4 +53,9 @@ public class ProduitController {
     public ResponseEntity<ProduitDTO> insert( @Valid @RequestBody ProduitInsertForm form){
         return ResponseEntity.ok( service.insert(form) );
     }
+
+    @DeleteMapping({"/{id}", "/delete/{id}"})
+    public ResponseEntity<ProduitDTO> delete( @PathVariable long id ){
+        return ResponseEntity.ok( service.delete(id) );
+    }
 }

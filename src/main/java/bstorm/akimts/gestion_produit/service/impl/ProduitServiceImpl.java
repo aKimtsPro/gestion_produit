@@ -62,4 +62,15 @@ public class ProduitServiceImpl implements ProduitService {
         return mapper.toDTO( repository.save(produit) );
 
     }
+
+    @Override
+    public ProduitDTO delete(long id) {
+
+        Produit produit = repository.findById( id )
+                .orElseThrow( ElementNotFoundException::new );
+
+        repository.delete( produit );
+
+        return mapper.toDTO( produit );
+    }
 }

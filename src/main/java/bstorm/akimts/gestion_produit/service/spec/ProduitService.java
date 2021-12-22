@@ -11,5 +11,6 @@ public interface ProduitService {
     List<ProduitDTO> getAll();
     ProduitDTO getOne(long id);
     ProduitDTO insert(ProduitInsertForm form) throws MarqueNotFoundException;
+    ProduitDTO delete(long id);
 
 }
